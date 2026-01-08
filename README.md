@@ -3,7 +3,7 @@
 This repository contains a dbt project for the Order Management System (OMS). using dbt-cloud to transform and clean data in snowflake cloud data warehouse. and create a customer revenue report using Power BI.
 
 ## Data Used
-- [orders managment system data](project-data)
+- [orders managment system data](oms_data)
 
 **Project Structure**
 - `models/` — dbt models and sources
