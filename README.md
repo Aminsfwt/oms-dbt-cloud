@@ -1,15 +1,40 @@
-Welcome to your new dbt project!
+# SleekData — OMS dbt Project
 
-### Using the starter project
+This repository contains a dbt project for the Order Management System (OMS) used by SleekData. It includes staging models, facts, and marts used to transform raw order data into analytics-ready tables.
 
-Try running the following commands:
-- dbt run
-- dbt test
+**Project Structure**
+- `models/` — dbt models and sources
+	- `staging/` — staging models: `stg_customers.sql`, `stg_orderitems.sql`, `stg_orders.sql`
+	- `Facts/` — fact tables: `fact_orders.sql`
+	- `marts/` — marts and aggregated models: `customer_revenue.sql`
+- `macros/` — project macros
+- `seeds/`, `snapshots/`, `tests/`, and `target/`
+
+**Key Models**
+- `stg_customers` — cleans and standardizes customer data
+- `stg_orders` — raw orders ingested and normalized
+- `stg_orderitems` — individual order line items
+- `fact_orders` — fact table for order-level analytics
+- `customer_revenue` — aggregated revenue metrics per customer
+
+**Quickstart**
+Prerequisites: `dbt` (core or cloud), target warehouse configured in `profiles.yml`.
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+**Data Lineage diagram**
+
+![Data Lineage](Images/Data-Lineage.png)
+
+- Customers Revenue Analytics (PBIX): [Images/Customers-Revenue-Analytics.pbix](Images/Customers-Revenue-Analytics.pbix)
+
+
+
+**OMS Dashboard preview**
+
+![OMS Dashboard](Images/order_management_system_dashboard.png)
+
+If you add further images, reference them from `Images/` and include them in this section using standard Markdown image syntax.
+
+
+
+
