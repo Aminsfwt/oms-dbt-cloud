@@ -1,0 +1,12 @@
+
+{{ config(materialized='view') }}
+
+SELECT  
+    ORDERID ,
+    ORDERITEMID ,
+    PRODUCTID ,
+    QUANTITY ,
+    UNITPRICE,
+    (QUANTITY * UNITPRICE) AS TOTALPRICE,
+    UPDATED_AT
+FROM {{source('raw_data', 'ORDERITEMS')}}     
