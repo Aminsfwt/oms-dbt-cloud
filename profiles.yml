@@ -1,0 +1,9 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: order_manag_sys_WH
+      database: SLEEKMART_OMS
+      schema: L3_CONSUMPTION
